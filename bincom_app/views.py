@@ -15,13 +15,11 @@ def polling_unit_result(request, polling_unit_id):
     result = AnnouncedPuResult.objects.all()
     party_scores = result.values_list('party_score', flat=False)
     party_abbreviations = result.values_list('party_abbreviation', flat=False)
-
     context = {
         'result': result,
         'party_scores': party_scores,
         'party_abbreviations': party_abbreviations
     }
-
     return render(request, 'bincom_app/polling_unit_result.html', context)
 
 
