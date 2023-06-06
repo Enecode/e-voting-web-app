@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Polling Unit Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="colM">Polling Unit Result</h1>
+        <h2 class="colM">Polling Unit ID: {{ result.88.polling_unit_uniqueid }}</h2>
+
+        <div class="row">
+            <div class="col">
+                <h2>Party Abbreviation</h2>
+                {% for party_abb in result %}
+                    <p>{{ party_abb.party_abbreviation }}</p>
+                {% endfor %}
+            </div>
+            <div class="col">
+                <h2 class=" red">Party Score</h2>
+                {% for score in result %}
+                    <p>{{ score.party_score}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+{#<html lang="eng" xmlns="http://www.w3.org/1999/html">#}
+{#<head>#}
+{#    <title>Polling Unit Result</title>#}
+{#</head>#}
+{#<body>#}
+{#    <h1>Polling Unit Result</h1>#}
+{#    <h2>Polling Unit ID: {{ result.0.polling_unit_uniqueid }}</h2>#}
+{##}
+{#    <div>#}
+{#        <h2>Party Abbreviation</h2>#}
+{#        {% for party_abb in result %}#}
+{#            <p>{{ party_abb.party_abbreviation }}</p>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#    <div>#}
+{#        <h2>Party Score</h2>#}
+{#        {% for score in result %}#}
+{#            <p>{{ score.party_score}}</p>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}

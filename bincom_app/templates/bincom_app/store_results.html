@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Store Results</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="ward_name">Ward Name:</label>
+                <label>
+                    <input type="text" class="form-control" name="ward_name" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="party_scores">Party Scores:</label>
+                <label>
+                    <input type="number" class="form-control" name="party_score[]" required>
+                </label>
+{#                <label>#}
+{#                    <input type="number" class="form-control" name="party_score[]" required>#}
+{#                </label>#}
+            </div>
+            <div class="form-group">
+                <label for="party_abbreviations">Party Abbreviations:</label>
+                <label>
+                    <input type="text" class="form-control" name="party_abbreviation[]" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="entered_by_user">Entered by User:</label>
+                <label>
+                    <input type="text" class="form-control" name="entered_by_user" required>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Government Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Local Government Result</h1>
+        <div class="form-group mt-4">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <label for="selected_lga">Select Local Government:</label>
+                <select class="form-control" name="selected_lga" id="selected_lga">
+                    {% for lga in lgas %}
+                        <option class="fieldBox" value="{{ lga.lga_name }}" {% if lga.lga_name == selected_lga %}selected{% endif %}>
+                            {{ lga.lga_name }}
+                        </option>
+                    {% endfor %}
+                </select>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </form>
+
+            {% if selected_lga %}
+                <h2 class="mt-5">Total Score for {{ selected_lga }}</h2>
+                <p>{{ total_score }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
