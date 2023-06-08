@@ -2,7 +2,13 @@ from django.db.models import Sum
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils import timezone
+
 from .models import *
+
+
+# Create your views here.
+def index(request):
+    return render(request, 'bincom_app/index.html')
 
 
 def polling_unit_result(request, polling_unit_id):
