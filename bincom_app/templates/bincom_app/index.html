@@ -1,10 +1,15 @@
+<!-- home.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
 </head>
 <body>
-    <p>Welcome to london</p>
+    <h1>Welcome to the Home Page</h1>
+    <ul>
+        <li><a href="{% url 'polling_unit_result' polling_unit_id=1 %}">Polling Unit Result</a></li>
+        <li><a href="{% url 'lga_result' %}">LGA Result</a></li>
+        <li><a href="{% url 'store_results' %}">Store Results</a></li>
+    </ul>
 </body>
 </html>
