@@ -6,12 +6,12 @@
 </head>
 <body>
     <div class="container center ">
-        <h1>Welcome to the Home Page</h1>
+        <h1>Welcome to Evoting Portal</h1>
         <div>
             <ul>
+                <li><a href="{% url 'bincom_app:store_results' %}">Store Results</a></li>
                 <li><a href="{% url 'bincom_app:polling_unit_result' polling_unit_id=1 %}">Polling Unit Result</a></li>
                 <li><a href="{% url 'bincom_app:lga_result' %}">LGA Result</a></li>
-                <li><a href="{% url 'bincom_app:store_results' %}">Store Results</a></li>
             </ul>
         </div>
     </div>
