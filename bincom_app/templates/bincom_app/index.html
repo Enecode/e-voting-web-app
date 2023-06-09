@@ -2,13 +2,19 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <ul>
-        <li><a href="{% url 'bincom_app:polling_unit_result' polling_unit_id=1 %}">Polling Unit Result</a></li>
-        <li><a href="{% url 'bincom_app:lga_result' %}">LGA Result</a></li>
-        <li><a href="{% url 'bincom_app:store_results' %}">Store Results</a></li>
-    </ul>
+    <div class="container center ">
+        <h1>Welcome to the Home Page</h1>
+        <div>
+            <ul>
+                <li><a href="{% url 'bincom_app:polling_unit_result' polling_unit_id=1 %}">Polling Unit Result</a></li>
+                <li><a href="{% url 'bincom_app:lga_result' %}">LGA Result</a></li>
+                <li><a href="{% url 'bincom_app:store_results' %}">Store Results</a></li>
+            </ul>
+        </div>
+    </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </body>
 </html>
