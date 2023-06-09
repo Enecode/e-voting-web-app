@@ -94,11 +94,12 @@ WSGI_APPLICATION = 'bincomproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        "USER": env("DB_USER"),
-        "PASSWORD": env("DB_PASSWORD"),
-        "HOST": env("DB_HOST"),
-        "PORT": env("DB_PORT"),
+        'Database': env("Database"),
+        "Username": env("Username"),
+        "Password": env("Password"),
+        "Hostname": env("Hostname"),
+        "Port": env("Port"),
+        "SECRET_KEY": env("SECRET_KEY")
     }
 }
 # Password validation
